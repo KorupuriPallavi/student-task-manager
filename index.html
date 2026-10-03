@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Student Task Manager</title>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="todo-app">
+
+        <h2>
+            Student Task Manager
+            <img src="img/icon.png" alt="">
+        </h2>
+
+        <!-- Task Input -->
+        <div class="row">
+
+            <input 
+                type="text" 
+                id="input-box" 
+                placeholder="Add your task"
+            >
+
+            <select id="priority">
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+
+            <button onclick="addTask()">Add</button>
+
+        </div>
+
+        <!-- Filters -->
+        <div class="filters">
+            <button onclick="showAll()">All</button>
+            <button onclick="showPending()">Pending</button>
+            <button onclick="showCompleted()">Completed</button>
+        </div>
+
+        <!-- Task Statistics -->
+        <div id="task-stats">
+            Total: 0 | Completed: 0 | Pending: 0
+        </div>
+
+        <!-- Task List -->
+        <ul id="list-container">
+        </ul>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
